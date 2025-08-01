@@ -20,3 +20,9 @@ let isLoggedInNumber = Boolean(isLoggedIn) // convert to boolean
 console.log(isLoggedInNumber) // true
 // if isLoggedIn is 0 , it will be converted to false
 // if isLoggedIn is empty string , it will be converted to false
+
+
+let a = 1
+let stringNumber = String(a) // convert to string
+console.log(typeof stringNumber) // string
+console.log(stringNumber) // "1"
