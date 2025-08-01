@@ -16,3 +16,10 @@ let isLoggedIn = true   // boolean
 // undefined
 // null -> standalone values 
 // symbol -> for uniqueness
+
+
+// objects
+
+console.log(typeof name);   // string
+console.log(typeof 25);  // number
+console.log(typeof null);  // object (this is a bug in JavaScript)
