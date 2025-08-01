@@ -9,3 +9,9 @@ accountEmail = 'jeet@456' // can change var variable
 accountCity = 'Pune' // can change global variable
 
 console.table([accountEmail, accountCity, accountId, accountnName]);
+
+/*
+prefer not to use var 
+because of issue in blocking scope 
+and functional scope 
+*/
