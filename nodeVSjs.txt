@@ -1,0 +1,4 @@
+node -> A runtime environment for executing JS outside browser
+     -> runs outside the browser
+
+js -> runs inside the browser
