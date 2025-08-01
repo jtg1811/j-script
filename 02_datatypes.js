@@ -5,3 +5,14 @@
 let name = "jeet"  // string
 let age  = 25   // number
 let isLoggedIn = true   // boolean
+
+
+// primitive data types
+
+// number
+// bigint
+// string
+// boolean
+// undefined
+// null -> standalone values 
+// symbol -> for uniqueness
