@@ -32,3 +32,19 @@ console.log(myn2.splice(2,4))  // splice(startindex,deletecount )
 */
 console.log("B",myn2)  // B [1,2,7]
    // will return whose range is not included in splice
+
+   
+const myn3 = [1,2,3,4,5,6,7]
+console.log(myn3.slice(2,4))  // slice(startindex,endindex)
+console.log("C",myn3)  // C [1,2,3,4,5,6,7]
+/*
+    slice will not manipulate the original array.
+*/
+const myn4 = [1,2,3,4,5,6,7]
+console.log(myn4.splice(2,4))  // splice(startindex,deletecount)
+console.log("D",myn4)  // D [1,2,7]
+/*
+    splice will manipulate the original array.
+    splice will remove ele from the original array.
+    splice will return the removed elements
+*/
