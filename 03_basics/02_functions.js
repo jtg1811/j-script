@@ -17,3 +17,4 @@ function returnSecondValue(myarr){
     return myarr[1]
 }
 console.log(returnSecondValue(mynewArr))
+// function concepts
