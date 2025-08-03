@@ -9,3 +9,8 @@ const myobj = {}
 if (Object.keys(myobj).length === 0){
     console.log("obj is empty")
 }
+
+if(""){
+    console.log(true)
+}
+console.log(false)
