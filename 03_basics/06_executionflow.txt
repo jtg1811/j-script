@@ -1,0 +1,7 @@
+1.   global execution context.  -> this
+
+2.   memory phase. -> where all the variables are kept as undefined and functions also
+
+3.   executional phase -> where all the variablesand functions will get execute.
+
+imp note ---> for function another memory phase and executional phase will be made.
