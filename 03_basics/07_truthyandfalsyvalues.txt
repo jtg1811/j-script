@@ -1,0 +1,3 @@
+falsy values -->   0 , -0 , null , NaN, undefined , bigint 0n, ""
+
+truthy values --> "0" , "false" , " ", [] , {} , function(){}
