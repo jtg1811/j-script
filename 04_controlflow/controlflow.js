@@ -17,8 +17,15 @@
 
 // nullish colalescing operator ( ?? ) : null defined
 
-let val,val1 ;
-val = 6 ?? 10    // 6
-val1 = null ?? 10  // 10 
+// let val,val1 ;
+// val = 6 ?? 10    // 6
+// val1 = null ?? 10  // 10 
 
-console.log(val1)
+// console.log(val1)
+
+
+// terinary operator
+
+const temperature = 10
+
+temperature > 80 ? console.log("high temperature") : console.log("low temperature")
