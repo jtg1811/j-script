@@ -51,3 +51,13 @@ console.log(arr)
 
 const tenAdd = myNumbers.map((nums) => nums + 10)
 console.log(tenAdd)
+
+// chaining
+const newNumbers = myNumbers.map((nums) => nums * 10)
+                            .map((nums) => nums + 1)      // upper map val will pass here
+                            .filter((nums) => {          // upper map val will pass here
+                                if(nums > 40){
+                                    return nums
+                                }
+                            })
+console.log(newNumbers)
