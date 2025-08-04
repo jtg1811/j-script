@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;color: white;">
+    <ul class="language" style="background-color: blue;">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addItemList(langname){
+        const liEle = document.createElement('li')
+        liEle.innerHTML = `${langname}`
+        document.querySelector(".language").
+        appendChild(liEle)
+    }
+    function addItemOptiWay(langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector(".language").appendChild(li)
+    }
+    addItemList("python")
+    addItemList("cpp")
+    addItemOptiWay("golang")
+
+    // edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    const newli = document.createElement('li')
+    const textContent = document.createTextNode("typescript")
+    newli.appendChild(textContent)
+    secondLang.replaceWith(newli)
+
+    //edit
+    const firstLang = document.querySelector("li:nth-child(1)")
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode("javascript"))
+    firstLang.replaceWith(li)
+
+    //remove
+    const lastlang = document.querySelector("li:last-child")
+    lastlang.remove()
+</script>
+</html>
