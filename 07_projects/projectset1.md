@@ -6,7 +6,7 @@
 
 ## Solution code
 
-## project 1
+## project 1 
 
 ``` javascript 
 
@@ -34,5 +34,43 @@ buttons.forEach(function (button) {
   });
 });
 
-
 ```
+
+## project 2 --> BMI calculator
+
+``` javascript
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+  const results = document.querySelector('#results');
+
+  results.innerHTML = ' ';
+  if (height === '' || height < 0 || isNaN(height)) {
+    results.innerHTML = 'enter valid height';
+  } else if (weight === '' || weight < 0 || isNaN(weight)) {
+    results.innerHTML = 'enter valid weight';
+  } else {
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+    // results.innerHTML = `<span>${bmi}</span>`;
+
+    const bmiValue = parseFloat(bmi);
+    const textMsg = document.createElement('h2');
+    textMsg.innerHTML = `BMI: ${bmi}`;
+    if (bmiValue < 18.6) {
+      textMsg.innerHTML = 'under weight';
+      textMsg.style.backgroundColor = 'orange';
+    } else if (bmiValue >= 18.6 && bmiValue <= 24.9) {
+      textMsg.innerHTML = 'normal range';
+      textMsg.style.backgroundColor = 'green';
+    } else {
+      textMsg.innerHTML = 'over weight';
+      textMsg.style.backgroundColor = 'red';
+    }
+    results.appendChild(textMsg);
+  }
+});
