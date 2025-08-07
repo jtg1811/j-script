@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: black;color: aliceblue;">
+    <h2>amazing images</h2>
+    <div>
+        <ul id = "images">
+            <li>
+                <img width="200px" id="india" 
+                src="https://images.memphistours.com/xlarge/181926566_Manali,%20India.jpg"
+                alt="india">
+            </li>
+                        <li>
+                <img width="200px" id="japan" 
+                src="https://www.gokitetours.com/wp-content/uploads/2024/12/The-10-Hidden-Gems-of-Japan-to-Explore-in-2025.webp"
+                alt="">
+            </li>
+            <li>
+                <img width="200px" id="spain" 
+                src="https://9b079307a2.clvaw-cdnwnd.com/4df175bf0b039593af0dba0fcbd2d32f/200008276-ad662ad663/Discover%20Spain.png?ph=9b079307a2"
+                alt="">
+            </li>
+            <li>
+                <img width="200px" id="london" 
+                src="https://images.pexels.com/photos/1796715/pexels-photo-1796715.jpeg?cs=srgb&dl=pexels-chaitaastic-1796715.jpg&fm=jpg"
+                alt="">
+            </li>
+            <li>
+                <img width="200px" id="san_fransico" 
+                src="https://upload.wikimedia.org/wikipedia/commons/6/61/San_Francisco_from_the_Marin_Headlands_in_August_2022.jpg"
+                alt="">
+            </li>
+             <li>
+                <img width="200px" id="switzerland" 
+                src="https://static.toiimg.com/thumb/msid-113370310,width-748,height-499,resizemode=4,imgsize-216138/.jpg"
+                alt="">
+            </li>
+            <li id ='google'><a style="color: aliceblue;" href="https://google.com">google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+        
+    // type , timestamp ,preventDefault ( for form) 
+    // target , toElement , srcElement,currentTarget
+    // clientX , clientY , screenX , screenY
+    // altkey, ctrlkey, shiftkey , keycode
+
+    // Bubbling: The event starts at the innermost element (where you clicked) 
+    // and moves outward to its parents.
+
+    // Capturing: The event starts from the outermost parent 
+    // and moves inward to the target element.
+
+    document.getElementById('images').addEventListener('click',function(e){
+        console.log('inside images clicked')
+    },false)
+    document.getElementById('india').addEventListener('click',function(e){
+        console.log('india clicked')
+        e.stopPropagation() // to make inner and outer ele seperate -> bubbling
+    },false)
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault() // click will not direct to google site
+        e.stopPropagation()
+        console.log('google click')
+    },false)
+// true -> capturing
+</script>
+</html>
