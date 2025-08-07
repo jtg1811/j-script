@@ -56,18 +56,37 @@
     // Capturing: The event starts from the outermost parent 
     // and moves inward to the target element.
 
-    document.getElementById('images').addEventListener('click',function(e){
-        console.log('inside images clicked')
-    },false)
-    document.getElementById('india').addEventListener('click',function(e){
-        console.log('india clicked')
-        e.stopPropagation() // to make inner and outer ele seperate -> bubbling
-    },false)
-    document.getElementById('google').addEventListener('click',function(e){
-        e.preventDefault() // click will not direct to google site
-        e.stopPropagation()
-        console.log('google click')
-    },false)
+    // we can also use queryselector in place of getElementById
+
+    // document.querySelector('images').addEventListener('click',function(e){
+    //     console.log('inside images clicked')
+    // },false)
+    // document.getElementById('india').addEventListener('click',function(e){
+    //     console.log('india clicked')
+    //     e.stopPropagation() // to make inner and outer ele seperate -> bubbling
+    // },false)
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault() // click will not direct to google site
+    //     e.stopPropagation()
+    //     console.log('google click')
+    // },false)
 // true -> capturing
+    
+    document.querySelector('#images').addEventListener('click',function(e){
+        // console.log(e.target.parentNode)
+        // let removeIT = e.target.parentNode
+        // removeIT.remove()
+
+        console.log(e.target.tagName)
+        if(e.target.tagName === 'IMG') {
+            let removeIT = e.target.parentNode
+            removeIT.remove()
+        }
+
+        // if clicked in img than its parent is li
+        // if click on list (li) its parent is ul
+        // all will be removed
+        //removeIT.remove()
+    },false)
 </script>
 </html>
