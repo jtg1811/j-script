@@ -90,3 +90,24 @@ setInterval(function () {
 
 
 ```
+
+## project 4 --> random color generator
+
+``` javascript
+
+const randomColor = function () {
+  const hex = '1234567ABCEDEF';
+  const color = '#';
+  for (let i = 0; i < 6; i++) {
+    let randomIndex = Math.floor(Math.random * 16);
+    color += hex[randomIndex];
+  }
+  return color;
+};
+
+const startChangingColor = function () {
+  document.body.style.backgroundColor = randomColor();
+};
+document.querySelector('#start').addEventListener('click', startChangingColor);
+
+```
