@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello from jeet</h1>
+    <button id = 'start' style="font-size: 1rem; padding: 1rem 1rem;">start</button>
+    <button id = 'stop' style="font-size: 1rem; padding: 1rem 1rem;">stop</button>
+    <button id="btn" style="font-size: 1rem; padding: 1rem 1rem;">stop changing</button>
+</body>
+<script>
+    const changeText = function(){
+        const ele = document.querySelector('h1')
+        ele.innerHTML = "hello world"
+    }
+    const changeMe = setTimeout(changeText, 2000)
+    
+    document.querySelector('#btn').
+    addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log('stopped')  
+    })
+
+    let id;
+    document.querySelector('#start').
+    addEventListener('click',function(){
+        id = setInterval(function(){
+            console.log('started')
+        },1000)
+    })
+    document.querySelector('#stop').
+    addEventListener('click',function(){
+        clearInterval(id)
+        console.log('stopped')
+    })
+</script>
+</html>
