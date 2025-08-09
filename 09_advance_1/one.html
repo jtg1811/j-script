@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = 'btn' style="background-color: antiquewhite;">
+        click me
+    </button>
+    <div id = 'box' style="background-color: lightblue;
+    width: 400px; height:300px;border: 2px solid black;">
+    this is box
+    </div>
+</body>
+<script>
+    let change = false
+    document.querySelector('#btn').
+    addEventListener('click',function(){
+        const box = document.querySelector('#box')
+        if(!change) {
+            box.innerHTML="hello world"
+            box.style.backgroundColor="lightgreen"
+        }
+        else {
+            box.innerHTML="this is box"
+            box.style.backgroundColor="lightblue"
+        }
+        change = !change
+    })
+</script>
+</html>
