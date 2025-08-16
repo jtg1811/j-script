@@ -1,0 +1,12 @@
+<button id="btn">Click Me</button>
+<script>
+  const obj = {
+    name: "Jeet",
+    show: function() {
+      console.log(this); 
+    }
+  };
+
+  const btn = document.getElementById("btn");
+  btn.addEventListener("click", obj.show.bind(obj));
+</script>
