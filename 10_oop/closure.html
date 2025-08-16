@@ -7,6 +7,8 @@
 </head>
 <body style="background-color: black; color: aliceblue;">
     <h1>hello world</h1>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
 </body>
 <script>
     // function outer() {
@@ -27,5 +29,25 @@
     }
     const out = outer()
     out()
+</script>
+<script>
+    // document.querySelector('#orange').
+    // addEventListener('click',function (){
+    //     document.body.style.backgroundColor="orange"
+    // })
+    // document.querySelector('#green').
+    // addEventListener('click',function (){
+    //     document.body.style.backgroundColor="green"
+    // })
+    function clickHandler(color) {
+        //document.body.style.backgroundColor=`${color}`
+        return function() {
+            document.body.style.backgroundColor=`${color}`
+        }
+    }
+    document.querySelector('#orange').
+    addEventListener('click',clickHandler('orange'))
+    document.querySelector('#green').
+    addEventListener('click',clickHandler('green'))
 </script>
 </html>
